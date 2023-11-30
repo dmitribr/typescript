@@ -17,3 +17,23 @@ function dr() {
 ;
 var grey = 'fdfff'; //использование элиаса
 var grey2 = 23442;
+var nameLast = {
+    id: '843',
+    size: {
+        width: 8754,
+        height: 54
+    }
+};
+nameLast.color = '#556';
+var nameLast2 = {}; //присваеваем тип Name1
+var nameLast3 = {}; //присваеваем тип Name1
+var name2 = {
+    id: '43',
+    size: {
+        width: 34, //заполнение нового типа NewName
+        height: 54
+    },
+    gerArea: function () {
+        return this.size.width * this.size.height;
+    },
+};

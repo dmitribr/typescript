@@ -23,3 +23,40 @@ function dr ():never {            //тип never
 type Login = string | number;   //type создание собственных элиасов, можно указать один или несколько типов
 const grey: Login = 'fdfff';    //использование элиаса
 const grey2: Login = 23442;
+
+//интерфейсы
+interface Name1 {              //создаём интерфейс Name1
+    readonly id: string,        //readonly только для чтения
+    color?: string,             //? является тем что данное значение не обязательное
+    size: {
+        width: number,
+        height: number
+    }
+}
+
+const nameLast: Name1 = {     //присваем тип Name1
+    id: '843',
+    size: {
+        width: 8754,
+        height: 54
+    }
+}
+nameLast.color = '#556';
+
+const nameLast2 = {} as Name1;      //присваеваем тип Name1
+const nameLast3 = <Name1>{};        //присваеваем тип Name1
+
+interface NewName extends Name1 {    //наследование интерфейса
+    gerArea: () => number;            //добавление новых свойств
+}
+
+const name2: NewName = {              
+    id: '43',
+    size: {
+        width: 34,                     //заполнение нового типа NewName
+        height: 54
+    },
+    gerArea(): number {
+        return this.size.width * this.size.height
+    },
+}
