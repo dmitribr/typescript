@@ -1,4 +1,4 @@
-const pulse: string = 'hgg';  //строковый тип данных 
+let pulse: string = 'hgg';  //строковый тип данных 
 
 const sum: number = 453;        //числовой тип данных
 
@@ -9,12 +9,12 @@ const numberArr2: Array<number> = [1, 4, 6, 7];   //generic
 const numberStringArr: [number, string] = [167, 'Feder'];   //tuple
 let variable: any = 43;   //any можно сменить тип данных, допустим на string
 
-function nameFir (name: string): void {      //в аргументе так же указываем тип данных.
+function NameFir (name: string): void {      //в аргументе так же указываем тип данных.
     console.log(name);                       //тип void указывает на то что функция ничего не возвращает.
 };
-nameFir('dfff');
+NameFir('dfff');
 
-function dr ():never {            //тип never  
+function Der ():never {            //тип never  
     while (true) {
 
     }
@@ -83,16 +83,21 @@ const css: Icss = {
 }
 
 //Enumes помогает структурировать код
-enum member {
+enum Member {
     One,
     Two,
     three = 'err'
 }
 
-console.log(member.Two)  //в консоле отобразится порядковый номер 1
-console.log(member[1])  //отобразит Two
-console.log(member.three)  //отобразит err
+console.log(Member.Two)  //в консоле отобразится порядковый номер 1
+console.log(Member[1])  //отобразит Two
+console.log(Member.three)  //отобразит err
 
 //функции
+function Summa (a: number, b: number): number {
+    return a + b;
+}
 
-
+function Str1 (str: string): string {
+    return str.toLowerCase();
+}

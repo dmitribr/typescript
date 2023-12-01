@@ -5,12 +5,12 @@ var numberArr = [1, 4, 6, 7]; //массив
 var numberArr2 = [1, 4, 6, 7]; //generic 
 var numberStringArr = [167, 'Feder']; //tuple
 var variable = 43; //any можно сменить тип данных, допустим на string
-function nameFir(name) {
+function NameFir(name) {
     console.log(name); //тип void указывает на то что функция ничего не возвращает.
 }
 ;
-nameFir('dfff');
-function dr() {
+NameFir('dfff');
+function Der() {
     while (true) {
     }
 }
@@ -51,13 +51,20 @@ var css = {
     margin_top: '10px'
 };
 //Enumes помогает структурировать код
-var Member;
-(function (Member) {
-    Member[Member["One"] = 0] = "One";
-    Member[Member["Two"] = 1] = "Two";
-    Member["three"] = "err";
-})(Member || (Member = {}));
-console.log(Member.Two); //в консоле отобразится порядковый номер 1
-console.log(Member[1]); //отобразит Two
-console.log(Member.three); //отобразит err
-//
+var member;
+(function (member) {
+    member[member["One"] = 0] = "One";
+    member[member["Two"] = 1] = "Two";
+    member["three"] = "err";
+})(member || (member = {}));
+console.log(member.Two); //в консоле отобразится порядковый номер 1
+console.log(member[1]); //отобразит Two
+console.log(member.three); //отобразит err
+//функции
+function Summa(a, b) {
+    return a + b;
+}
+function Str1(str) {
+    return str.toLowerCase();
+}
+//классы
