@@ -1,4 +1,4 @@
-var tet = 'hgg'; //строковый тип данных 
+var pulse = 'hgg'; //строковый тип данных 
 var sum = 453; //числовой тип данных
 var logi = true; //логический тип данных
 var numberArr = [1, 4, 6, 7]; //массив
@@ -37,3 +37,27 @@ var name2 = {
         return this.size.width * this.size.height;
     },
 };
+var newClock = /** @class */ (function () {
+    function newClock() {
+        this.time = new Date();
+    }
+    newClock.prototype.setTime = function (date) {
+        this.time = date;
+    };
+    return newClock;
+}());
+var css = {
+    border: '1px',
+    margin_top: '10px'
+};
+//Enumes помогает структурировать код
+var Member;
+(function (Member) {
+    Member[Member["One"] = 0] = "One";
+    Member[Member["Two"] = 1] = "Two";
+    Member["three"] = "err";
+})(Member || (Member = {}));
+console.log(Member.Two); //в консоле отобразится порядковый номер 1
+console.log(Member[1]); //отобразит Two
+console.log(Member.three); //отобразит err
+//

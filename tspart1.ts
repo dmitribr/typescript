@@ -1,4 +1,4 @@
-const tet: string = 'hgg';  //строковый тип данных 
+const pulse: string = 'hgg';  //строковый тип данных 
 
 const sum: number = 453;        //числовой тип данных
 
@@ -60,3 +60,39 @@ const name2: NewName = {
         return this.size.width * this.size.height
     },
 }
+
+interface Iclock {
+    time: Date,
+    setTime(data: Date): void
+}
+
+class newClock implements Iclock {    //имплементируем класс
+    time: Date = new Date()
+    setTime(date: Date): void {
+        this.time = date
+    }
+}
+
+interface Icss {
+    [key: string]:string           //не присваеваем конкретное число элеметнов и их значений
+}
+
+const css: Icss = {
+    border: '1px',
+    margin_top: '10px'
+}
+
+//Enumes помогает структурировать код
+enum member {
+    One,
+    Two,
+    three = 'err'
+}
+
+console.log(member.Two)  //в консоле отобразится порядковый номер 1
+console.log(member[1])  //отобразит Two
+console.log(member.three)  //отобразит err
+
+//функции
+
+
